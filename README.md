@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
-- Live Site URL: [GitHub](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/interactive-card-details-with-reactjs-28mWQ7FP0i)
+- Live Site URL: [GitHub](https://nicoams.github.io/interactive-card/)
 
 ## My process
 
