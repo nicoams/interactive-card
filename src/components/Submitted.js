@@ -18,7 +18,7 @@ export default function Submitted() {
       CVC: '',
     });
     functions.setError({});
-    navigate('/');
+    navigate('/interactive-card/');
   };
 
   return (

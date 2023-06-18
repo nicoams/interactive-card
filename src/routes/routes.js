@@ -9,7 +9,7 @@ const Navigation = () => (
     <Routes>
       <Route
         exact
-        path="/"
+        path="/interactive-card/"
         element={<Home />}
       />
       <Route
