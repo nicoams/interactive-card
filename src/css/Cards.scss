@@ -1,0 +1,120 @@
+@use 'base';
+@use 'colors';
+
+.cards-display {
+  height: 39.5%;
+  width: 100%;
+  color: colors.$neutral1;
+  position: relative;
+}
+
+.card-back,
+.card-front {
+  height: 150px;
+  width: 275px;
+  border-radius: 8px;
+  box-shadow: -0.5em 1em 2em rgba(black, 0.2);
+}
+
+.card-back {
+  background-image: url(../../public/images/bg-card-back.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 42px 35px;
+
+  p {
+    font-size: 0.6em;
+    transform: translateY(-10%);
+  }
+}
+
+.card-front {
+  background-image: url(../../public/images/bg-card-front.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 17.6px;
+
+  .card-logo {
+    height: 30px;
+    width: 60px;
+    background-image: url('../../public/images/card-logo.svg');
+    background-repeat: no-repeat;
+    background-size: 85%;
+  }
+
+  .card-info {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .number-ch {
+      letter-spacing: 2px;
+    }
+
+    .name-date {
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .cards-display {
+    height: 530px;
+    width: 50%;
+  }
+
+  .card-back,
+  .card-front {
+    height: 245px;
+    width: 445px;
+  }
+
+  .card-back {
+    top: auto;
+    bottom: 0;
+    padding: 0 55px;
+
+    p {
+      font-size: 0.8em;
+    }
+  }
+
+  .card-front {
+    top: 0;
+    padding: 30px 35px;
+    .card-logo {
+      height: 50px;
+      width: 102px;
+    }
+    .card-info {
+      .number-ch {
+        font-size: 1.5em;
+        letter-spacing: 3.5px;
+      }
+      .name-date {
+        font-size: 0.8em;
+      }
+    }
+  }
+}

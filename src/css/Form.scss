@@ -1,0 +1,115 @@
+@use 'base';
+@use 'colors';
+
+.form-wrapper {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card-name,
+  .card-number,
+  .card-date-n-cvc {
+    height: 93.6px;
+    width: 100%;
+  }
+}
+
+.error {
+  border-color: colors.$primary2;
+}
+
+.error-message {
+  font-size: 0.6em;
+  color: colors.$primary2;
+}
+
+label {
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: 0.6em;
+}
+
+input {
+  width: 100%;
+  margin: 0.2rem 0;
+  border: 1px solid colors.$neutral2;
+}
+
+input::placeholder {
+  color: rgba(colors.$neutral3, 0.7);
+}
+
+input,
+button {
+  padding: 0.7rem;
+  border-radius: 5px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+button {
+  width: 100%;
+  font-size: 1em;
+  line-height: 1.5em;
+  border: none;
+  color: colors.$neutral1;
+  background-color: colors.$neutral4;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.date-cvc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date {
+  width: 45%;
+
+  .mm-yy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    input {
+      width: 46%;
+    }
+  }
+}
+
+.cvc {
+  width: 50%;
+
+  input {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form-wrapper {
+    width: 35%;
+
+    .card-name,
+    .card-number,
+    .card-date-n-cvc {
+      height: 110px;
+      width: 100%;
+    }
+  }
+
+  label {
+    font-size: 0.7em;
+  }
+
+  input {
+    font-size: 1em;
+    margin: 0.5rem auto;
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+}
